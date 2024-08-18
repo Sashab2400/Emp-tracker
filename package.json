@@ -1,0 +1,19 @@
+{
+  "name": "emp-tracker",
+  "version": "1.0.0",
+  "description": "Week 12 - Employee Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postgres",
+    "inquirer",
+    "node.js"
+  ],
+  "author": "Sasha B.",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
