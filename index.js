@@ -4,18 +4,19 @@ const { Pool } = require('pg');
 const pool = new Pool(
     {
       // Enter PostgreSQL username
-      user: '',
+      user: ' ',
       // Enter PostgreSQL password
-      password: '',
+      password: ' ',
       host: 'localhost',
       database: 'courses_db'
   },
   console.log('Connected to the courses_db database!')
   )
-inquirer
-  .prompt([
+inquirer.prompt([
     {
       type: "list",
+      name: "name",
+      message: "What would you like to do?",
       choices: [
         "Add Employee",
         "View all departments",
@@ -61,32 +62,31 @@ inquirer
     }
   });
 
-  function addanemployee(){
-    console.log("addanemployee")
-    inquirer.prompt([{
-        type:input,
-        message:"Enter employee name",
-        name:"firstname"
-    }],
-    {
-        type:input,
-        message:"Enter employee name",
-        name:"lastname"
-    },
-    {
-        type:input,
-        message:"Enter employee role",
-        name:"role"
-    },
-    {
-        type:input,
-        message:"Enter employee manager",
-        name:"manager"
-    },
-    {
-        type:input,
-        message:"Enter employee manager",
-        name:"manager"
-    },
-)
-  }
+  function addanemployee() {
+    console.log("addanemployee");
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: 'Enter employee first name',
+            name: 'firstname'
+        },
+        {
+            type: 'input',
+            message: 'Enter employee last name',
+            name: 'lastname'
+        },
+        {
+            type: 'input',
+            message: 'Enter employee role',
+            name: 'role'
+        },
+        {
+            type: 'input',
+            message: 'Enter employee manager',
+            name: 'manager'
+        }
+    ]).then((answers) => {
+        // Handle the answers here
+        console.log('Employee Details:', answers);
+    });
+}

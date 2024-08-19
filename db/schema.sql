@@ -13,7 +13,7 @@ CREATE TABLE ROLE(
   title VARCHAR(30) UNIQUE NOT NULL
   Salary DECIMAL NOT NULL
   department_id INTEGER NOT NULL ,
-  CONTRAINT CK_ID0 foreign key (department_id) REFERNECES(  DEPARTMENT_ID)
+  CONTRAINT CK_ID0 foreign key (department_id) REFERENCES(  DEPARTMENT_ID)
 
 
 )
@@ -23,7 +23,7 @@ CREATE TABLE employee(
   last_name VARCHAR(30) NOT NULL
   role_id INTEGER NOT NULL
   manager_id INTEGER
-  CONSTRAINT CK_ID0 foreign key (role_id) REFERNECES ROLE(id)
+  CONSTRAINT CK_ID0 foreign key (role_id) REFERENCES ROLE(id)
 
 )
 
