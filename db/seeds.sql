@@ -8,11 +8,11 @@ VALUES ('Intro to JavaScript'),
        ('Game Design'),
        ('Cloud Development');*/
 
-/*INSERT INTO department (department_id)
+/*INSERT INTO department (department_id)*/
 
-USE courses_db;*/
+USE courses_db;
 
-INSERT INTO department(department_id) 
+INSERT INTO department(department_name) 
 VALUES ("Engineering"), 
        ("Finance"), 
        ("Legal"), 
